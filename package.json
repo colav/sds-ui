@@ -1,5 +1,4 @@
 {
-  "homepage": "https://colav.github.io/sds-ui",
   "name": "sds-ui",
   "version": "0.1.0",
   "private": true,
@@ -10,15 +9,10 @@
     "axios": "^0.23.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.3.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
