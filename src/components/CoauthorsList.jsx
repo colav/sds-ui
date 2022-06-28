@@ -22,7 +22,7 @@ const CoauthorsList = ({ data, title, height = 422, core }) => {
         size="small"
         title={title}
         headStyle={{ backgroundColor: '#003e65', color: 'white' }}
-        bodyStyle={{ padding: '10px', maxHeight: height }}
+        bodyStyle={{ padding: '10px', height: height }}
       >
         <Table
           rowKey="id"
