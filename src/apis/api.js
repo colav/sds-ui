@@ -46,7 +46,9 @@ export const APIRequest = (initialUrl) => {
 
       try {
         /* const result = await get(process.env.REACT_APP_API_URL + url); */
-        const result = await get('http://clustercien.udea.edu.co:8989' + url);
+        const result = await get(
+          'https://sds-investigacion.azurewebsites.net/sds_api' + url
+        );
 
         if (!didCancel) {
           if (result.status === 204) {
