@@ -9,7 +9,24 @@ import InfoButton from '../infoButton';
 /* UI Library Components */
 import { Card, Col } from 'antd';
 
-const VennChart = ({ data /* infoText */ }) => {
+const VennChart = () => {
+  const data = {
+    scholar: Math.floor(Math.random() * 40 + 10),
+    lens: Math.floor(Math.random() * 40 + 10),
+    wos: Math.floor(Math.random() * 40 + 10),
+    scopus: Math.floor(Math.random() * 40 + 10),
+    scholar_lens: Math.floor(Math.random() * 40 + 10),
+    scholar_wos: Math.floor(Math.random() * 40 + 10),
+    scholar_scopus: Math.floor(Math.random() * 40 + 10),
+    lens_wos: Math.floor(Math.random() * 40 + 10),
+    lens_scopus: Math.floor(Math.random() * 40 + 10),
+    wos_scopus: Math.floor(Math.random() * 40 + 10),
+    scholar_lens_wos: Math.floor(Math.random() * 40 + 10),
+    scholar_wos_scopus: Math.floor(Math.random() * 40 + 10),
+    scholar_lens_scopus: Math.floor(Math.random() * 40 + 10),
+    lens_wos_scopus: Math.floor(Math.random() * 40 + 10),
+    scholar_lens_wos_scopus: Math.floor(Math.random() * 40 + 10),
+  };
   const title = 'Fuentes Bibliográficas';
   const { sets, combinations } = useMemo(
     () =>

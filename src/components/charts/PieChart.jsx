@@ -9,7 +9,14 @@ import { Card, Empty } from 'antd';
 /* Componentes */
 import InfoButton from '../infoButton';
 
-const PieChart = ({ data, title, type = 'open_access' }) => {
+const PieChart = ({ title, type = 'open_access' }) => {
+  const data = [
+    { type: 'gold', value: Math.floor(Math.random() * 40 + 10) },
+    { type: 'hybrid', value: Math.floor(Math.random() * 40 + 10) },
+    { type: 'green', value: Math.floor(Math.random() * 40 + 10) },
+    { type: 'closed', value: Math.floor(Math.random() * 40 + 10) },
+    { type: 'bronze', value: Math.floor(Math.random() * 40 + 10) },
+  ];
   const bgColor = {
     hybrid: '#6448ff',
     green: '#25ff76',

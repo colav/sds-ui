@@ -25891,7 +25891,6 @@ const CitationsWrapper = ({ core }) => {
     };
     return 0;
   });
-  console.log(geo);
 
   /*   const location = useLocation();
   const [state] = APIRequest(
