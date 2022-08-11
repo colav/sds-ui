@@ -79,7 +79,7 @@ const PieChart = ({ title, type = 'open_access' }) => {
     },
   };
 
-  let config = type === 'compendium' ? config_a : config_b;
+  let config = type === 'open_access' ? config_b : config_a;
 
   return (
     <Card
@@ -88,9 +88,7 @@ const PieChart = ({ title, type = 'open_access' }) => {
       headStyle={{ backgroundColor: '#003e65', color: 'white' }}
       bodyStyle={{ padding: '10px', height: '420px' }}
       hoverable
-      extra={
-        type !== 'compendium' && <InfoButton title={title} type={'openAcces'} />
-      }
+      extra={<InfoButton title={title} type={type} />}
     >
       <div className="chart">
         {data.length > 0 ? (

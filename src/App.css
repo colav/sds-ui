@@ -176,6 +176,14 @@
   margin-bottom: 10px;
 }
 
+#filter__drawer--tutorial {
+  margin: 80px 30px;
+  text-align: center;
+  font-size: 22px;
+  color: #234165;
+  font-weight: 600;
+}
+
 /* ----- HOME ----- */
 
 .home--button {

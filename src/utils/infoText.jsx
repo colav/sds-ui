@@ -57,4 +57,35 @@ export const infoText = {
       saber más consulte la ficha técnica del indicador.
     </div>
   ),
+  compendiumSex: (
+    <div>
+      En la gráfica, se describe la distribución total de investigadores del
+      área de la salud afiliados a instituciones bogotanas por sexo de acuerdo a
+      la información disponible en la base de datos del Scienti de Minciencias.
+    </div>
+  ),
+  compendiumAge: (
+    <div>
+      En la gráfica, se describe la distribución total de investigadores del
+      área de la salud afiliados a instituciones bogotanas por grupo etáreo de
+      acuerdo a la información disponible en la base de datos del Scienti de
+      Minciencias.
+    </div>
+  ),
+  compendiumCategory: (
+    <div>
+      En la gráfica, se describe la distribución total de investigadores del
+      área de la salud afiliados a instituciones bogotanas por rango de
+      clasificación de acuerdo a la información disponible en la base de datos
+      del Scienti de Minciencias.
+    </div>
+  ),
+  compendiumScholar: (
+    <div>
+      En la gráfica, se describe la distribución total de investigadores del
+      área de la salud afiliados a instituciones bogotanas por nivel de
+      escolaridad de acuerdo a la información disponible en la base de datos del
+      Scienti de Minciencias.
+    </div>
+  ),
 };

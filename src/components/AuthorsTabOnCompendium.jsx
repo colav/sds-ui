@@ -23,27 +23,31 @@ const AuthorsTabOnCompendium = () => {
   return (
     <Row gutter={[15, 15]}>
       <Col xs={24} xl={12}>
-        <PieChart data={state.data.data.sex} title="Sexo" type="compendium" />
+        <PieChart
+          data={state.data.data.sex}
+          title="Sexo"
+          type="compendiumSex"
+        />
       </Col>
       <Col xs={24} xl={12}>
         <PieChart
           data={state.data.data.age}
           title="Rango de edad"
-          type="compendium"
+          type="compendiumAge"
         />
       </Col>
       <Col xs={24} xl={12}>
         <PieChart
           data={state.data.data.rank}
           title="Categoría Minciencias "
-          type="compendium"
+          type="compendiumCategory"
         />
       </Col>
       <Col xs={24} xl={12}>
         <ColumnChart
           data={state.data.data.scholarity}
           title="Nivel de escolaridad"
-          type="compendium"
+          type="compendiumScholar"
         />
       </Col>
     </Row>

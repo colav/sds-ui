@@ -21,7 +21,7 @@ const Regulations = ({ core }) => {
   const [state] = APIRequest(`${core.URL}?data=info`);
 
   useEffect(() => {
-    document.title = 'SALUDATA | Autores';
+    document.title = 'SALUDATA | Normatividad';
   }, []);
 
   if (state.isError) {

@@ -63,7 +63,7 @@ const ColumnChart = ({
     },
   };
 
-  let config = type === 'compendium' ? config_a : config_b;
+  let config = type === 'citations' ? config_b : config_a;
 
   return (
     <Card
@@ -72,9 +72,7 @@ const ColumnChart = ({
       headStyle={{ backgroundColor: '#003e65', color: 'white' }}
       bodyStyle={{ padding: '10px', height: height }}
       hoverable
-      extra={
-        type !== 'compendium' && <InfoButton title={title} type={'citations'} />
-      }
+      extra={<InfoButton title={title} type={type} />}
     >
       <div className="chart">
         {type !== 'compendium' && (
