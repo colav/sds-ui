@@ -44,9 +44,15 @@ const Header = ({ core }) => {
             y científicas.
           </p>
           <p>
-            Aquí podrá encontrar la información organizada por autores, grupos
-            de investigación, instituciones y temas de interés específicos o
-            globales.
+            Las bases de datos consideradas para el procesamiento de la
+            información son: OpenAlex, Lens, OADOI de Unpaywall, DOAJ, la bases
+            de datos abierta del Scienti del Ministerio de Ciencia, tecnología,
+            innovación y competitividad. Todos los datos son abiertos.
+          </p>
+          <p>
+            En la plataforma podrá encontrar la información organizada por
+            autores, grupos de investigación, instituciones y temas de interés
+            específicos o globales que están o se desarrollan en Bogotá.
           </p>
           <p>
             A través de las distintas opciones de búsqueda, la comunidad
@@ -170,10 +176,7 @@ const Header = ({ core }) => {
                 </>
               }
             >
-              <Link
-                to="/app/trends"
-                onClick={() => core.setURL('/app/trends')}
-              >
+              <Link to="/app/trends" onClick={() => core.setURL('/app/trends')}>
                 <LineChartOutlined className="header__icon" />
                 Tendencias
               </Link>

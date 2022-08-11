@@ -79,7 +79,6 @@ const FilterMenu = ({ core, onClose }) => {
   };
 
   useEffect(() => {
-    //core.setFilters(null);
     setInstitutions('');
     setGroups('');
     setYears('');

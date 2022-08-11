@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 /* UI Library Components */
 import { Drawer, Button } from 'antd';
@@ -15,6 +15,7 @@ import { useHistory } from 'react-router-dom';
 const FilterDrawer = ({ core }) => {
   const history = useHistory();
   const [visible, setVisible] = useState(false);
+  const [tutorial, setTutorial] = useState(true);
 
   const showDrawer = () => {
     setVisible(true);
@@ -37,6 +38,16 @@ const FilterDrawer = ({ core }) => {
     history.push(filteredURL);
     onClose();
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(true);
+      setTimeout(() => {
+        setVisible(false);
+        setTutorial(false);
+      }, 4000);
+    }, 2000);
+  }, []);
 
   return (
     <>
@@ -64,6 +75,14 @@ const FilterDrawer = ({ core }) => {
         footerStyle={{ textAlign: 'right' }}
       >
         <FilterMenu core={core} onClose={onClose} />
+        {tutorial && (
+          <div id="filter__drawer--tutorial">
+            <p>
+              En este panel encontrarás los filtros que estén disponibles según
+              la información que estés consultando.
+            </p>
+          </div>
+        )}
       </Drawer>
     </>
   );

@@ -41,8 +41,8 @@ const Home = ({ core }) => {
         <Col
           sm={24}
           xl={12}
-          xxl={10}
-          style={{ marginTop: '40px', marginBottom: 0, textAlign: 'center' }}
+          xxl={12}
+          style={{ marginTop: '15px', marginBottom: 0, textAlign: 'center' }}
         >
           <Card size="small" bordered style={{ borderRadius: '10px' }}>
             <Title level={2}>Central de información científica</Title>
