@@ -30,9 +30,12 @@ const TrendsTreeSelect = ({ data, core }) => {
           }}
           value={value}
           dropdownStyle={{
-            maxHeight: 500,
+            /* height: 450, */
             overflow: 'auto',
           }}
+          treeLine={{ showLine: true, showIcon: false }}
+          listHeight={500}
+          treeDefaultExpandAll
           treeData={data}
           placeholder="Listado de Propósitos, Programas y Conceptos"
           labelInValue

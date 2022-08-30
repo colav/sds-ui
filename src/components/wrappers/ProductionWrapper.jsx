@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 /* Components */
 import DocumentList from '../DocumentList';
@@ -22,9 +22,14 @@ const { TabPane } = Tabs;
 
 const ProductionWrapper = ({ core }) => {
   const location = useLocation();
-  const [state] = APIRequest(
+  const [state, setState] = APIRequest(
     `${location.pathname}${location.search}&data=production`
   );
+
+  useEffect(() => {
+    setState(`${location.pathname}${location.search}&data=production`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
 
   const tabMaker = (tabList) => {
     return (

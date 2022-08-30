@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import ErrorWarning from './ErrorWarning';
 import LoadingCard from './LoadingCard';
 import SortPolicies from './SortPolicies';
+import SubjectsHorizontalList from './SubjectsHorizontalList';
 
 /* UI Components Library */
 import { Card, List, Space, Avatar } from 'antd';
@@ -148,6 +149,17 @@ const AuthorsTab = ({ core }) => {
                         {item.affiliation.institution.name}
                       </Link>
                     </div>
+                  ) : (
+                    ''
+                  )}
+                  {item.subjects?.length ? (
+                    <>
+                      <p className="subjects__list--title">Temas: </p>
+                      {SubjectsHorizontalList({
+                        subjectsList: item.subjects,
+                        core: core,
+                      })}
+                    </>
                   ) : (
                     ''
                   )}

@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Utilities */
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 /* UI Library Components */
 import { Card, Col, Tree, Typography } from 'antd';
@@ -23,11 +23,21 @@ const SubjectsTitleCard = ({ data, core }) => {
             description={
               <>
                 <Typography.Title level={4} style={{ marginBottom: 0 }}>
-                  {data.tree.key === 0 ? 'Tema:' : 'Subtema:'}
+                  {data.tree.key === '0' ? 'Tema:' : 'Subtema:'}
                 </Typography.Title>
                 <Typography.Title level={2} style={{ margin: 0 }}>
                   {data.tree.title}
                 </Typography.Title>
+                {data.parent.title ? (
+                  <Typography.Title level={4} style={{ margin: 0 }}>
+                    Tema padre:{' '}
+                    <Link to={`/app/subjects?id=${data.parent.id}`}>
+                      {data.parent.title}
+                    </Link>
+                  </Typography.Title>
+                ) : (
+                  ''
+                )}
               </>
             }
           />

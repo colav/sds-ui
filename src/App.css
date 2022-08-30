@@ -303,6 +303,12 @@
   color: gray;
 }
 
+.subjects__list--title {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 17px;
+}
+
 /* ----- UI LIBRARY OVERWRITE ----- */
 
 .ant-list-vertical .ant-list-item {

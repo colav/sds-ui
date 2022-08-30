@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 /* Utilities */
 import { APIRequest } from '../../apis/api';
@@ -13,9 +13,14 @@ import WordCloudChart from '../charts/WordCloudChart';
 
 const SubjectsWrapper = ({ core }) => {
   const location = useLocation();
-  const [state] = APIRequest(
+  const [state, setState] = APIRequest(
     `${location.pathname}${location.search}&data=subjects&limit=20`
   );
+
+  useEffect(() => {
+    setState(`${location.pathname}${location.search}&data=subjects&limit=20`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
 
   if (state.isError) {
     return <ErrorWarning />;
