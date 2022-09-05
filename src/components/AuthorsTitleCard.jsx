@@ -20,6 +20,7 @@ import { BankOutlined, TeamOutlined, ReadOutlined } from '@ant-design/icons';
 
 /* UI Library Sub-components */
 const { Meta } = Card;
+const { Title } = Typography;
 
 const AuthorsTitleCard = ({ core, data }) => {
   const iconList = {
@@ -120,6 +121,14 @@ const AuthorsTitleCard = ({ core, data }) => {
                 </Typography.Paragraph>
               )}
               <Space wrap>{renderedButtons(data.external_urls)}</Space>
+              {data.policies.ODS && (
+                <Title
+                  level={4}
+                  style={{ marginTop: 0, color: 'gray', marginBottom: 0 }}
+                >
+                  Aportes en:
+                </Title>
+              )}
               <Row style={{ marginTop: '10px' }}>
                 {data.policies.ODS && (
                   <PoliciesTag

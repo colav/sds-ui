@@ -48,12 +48,12 @@ const FilterMenu = ({ core, onClose }) => {
       ? `&keywords=${URL.get('keywords')}`
       : '';
     if (type !== 'institutions') {
-      filteredURL += URL.has('institution')
+      filteredURL += URL.has('institutions')
         ? `&institutions=${URL.get('institutions')}`
         : '';
     }
     if (type !== 'groups') {
-      filteredURL += URL.has('groups') ? `&groups=${URL.get('group')}` : '';
+      filteredURL += URL.has('groups') ? `&groups=${URL.get('groups')}` : '';
     }
     if (type !== 'years') {
       filteredURL += URL.has('start_year')

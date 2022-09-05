@@ -78,8 +78,8 @@ const FilterDrawer = ({ core }) => {
         {tutorial && (
           <div id="filter__drawer--tutorial">
             <p>
-              En este panel encontrarás los filtros que estén disponibles según
-              la información que estés consultando.
+              En este panel encontrarás los filtros disponibles según la
+              información que estés consultando.
             </p>
           </div>
         )}

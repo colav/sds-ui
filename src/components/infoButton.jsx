@@ -7,13 +7,13 @@ import { Modal } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
 
 /* Utitlites */
-import { infoText } from '../utils/infoText';
+import InfoText from '../utils/infoText';
 
-const InfoButton = ({ title = 'Información', type }) => {
+const InfoButton = ({ title = 'Información', type, core }) => {
   const info = () => {
     Modal.info({
       title: title,
-      content: infoText[type],
+      content: <InfoText type={type} core={core} />,
       width: '700px',
       maskClosable: true,
     });

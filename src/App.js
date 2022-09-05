@@ -29,6 +29,7 @@ import Calls from './components/modules/Calls';
 import NotFound from './components/modules/NotFound';
 import Policies from './components/modules/Policies';
 import Regulations from './components/modules/Regulations';
+import Techdocs from './components/modules/Techdocs';
 import SearchResult from './components/modules/SearchResult';
 import Subjects from './components/modules/Subjects';
 import UserManual from './components/modules/UserManual';
@@ -92,6 +93,9 @@ function App() {
             </Route>
             <Route exact path="/app/regulations">
               <Regulations core={core} />
+            </Route>
+            <Route exact path="/app/techdocs">
+              <Techdocs core={core} />
             </Route>
             <Route exact path="/app/policies">
               <Policies core={core} />

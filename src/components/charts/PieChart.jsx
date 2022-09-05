@@ -9,7 +9,7 @@ import { Card, Empty } from 'antd';
 /* Componentes */
 import InfoButton from '../infoButton';
 
-const PieChart = ({ data, title, type = 'open_access' }) => {
+const PieChart = ({ data, title, type = 'openAccess', core }) => {
   const bgColor = {
     hybrid: '#6448ff',
     green: '#25ff76',
@@ -72,7 +72,7 @@ const PieChart = ({ data, title, type = 'open_access' }) => {
     },
   };
 
-  let config = type === 'open_access' ? config_b : config_a;
+  let config = type === 'openAccess' ? config_b : config_a;
 
   return (
     <Card
@@ -81,7 +81,7 @@ const PieChart = ({ data, title, type = 'open_access' }) => {
       headStyle={{ backgroundColor: '#003e65', color: 'white' }}
       bodyStyle={{ padding: '10px', height: '420px' }}
       hoverable
-      extra={<InfoButton title={title} type={type} />}
+      extra={<InfoButton title={title} type={type} core={core} />}
     >
       <div className="chart">
         {data.length > 0 ? (

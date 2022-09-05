@@ -49,19 +49,21 @@ const Compendium = ({ core }) => {
       <TabPane tab="Grupos" key="groups">
         <Title style={secondary_color} level={3}>
           En esta sección podrá encontrar un listado de los grupos de
-          investigación radicados en Bogotá y pueden ser organizados de mayor a
-          menor, de acuerdo al número de artículos publicados o número total de
-          citas recibidas. Cada grupo puede ser consultado por su filiación
-          institucional, número de productos y citas, curva de producción y
-          citación temporal y temas en los que trabaja.
+          investigación radicados en Bogotá o que desarrollan coautorías con
+          grupos bogotanos y pueden ser organizados de mayor a menor, de acuerdo
+          al número de artículos publicados o número total de citas recibidas.
+          Cada grupo puede ser consultado por su filiación institucional, número
+          de productos y citas, curva de producción y citación temporal y temas
+          en los que trabaja.
         </Title>
         <CompendiumTable core={core} type="groups" />
       </TabPane>
       <TabPane tab="Instituciones" key="institutions">
         <Title style={secondary_color} level={3}>
           En esta sección podrá encontrar un listado de las instituciones que
-          hacen investigación en salud en Bogotá ordenadas de mayor a menor por
-          número de artículos publicados o número total de citas recibidas. Cada
+          hacen investigación en salud en Bogotá o que tienen coautorías con
+          instituciones bogotanas ordenadas de mayor a menor por número de
+          artículos publicados o número total de citas recibidas. Cada
           institución puede ser consultada por su número de artículos, citas
           recibidas, curva de producción y citación temporal y temas en los que
           trabaja.

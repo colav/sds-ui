@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 /* Components */
 import DocumentList from '../DocumentList';
@@ -22,14 +22,9 @@ const { TabPane } = Tabs;
 
 const ProductionWrapper = ({ core }) => {
   const location = useLocation();
-  const [state, setState] = APIRequest(
+  const [state] = APIRequest(
     `${location.pathname}${location.search}&data=production`
   );
-
-  useEffect(() => {
-    setState(`${location.pathname}${location.search}&data=production`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
 
   const tabMaker = (tabList) => {
     return (
@@ -52,9 +47,13 @@ const ProductionWrapper = ({ core }) => {
   return (
     <Row gutter={[15, 15]}>
       <Col xs={24} sm={24} md={12}>
-        <PieChart data={state.data.open_access} title="Acceso Abierto" />
+        <PieChart
+          data={state.data.open_access}
+          title="Acceso Abierto"
+          core={core}
+        />
       </Col>
-      <VennChart data={state.data.venn_source} />
+      <VennChart data={state.data.venn_source} core={core} />
       <Col span={24}>
         {state.data.types ? (
           tabMaker(state.data.types)

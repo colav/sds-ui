@@ -20,7 +20,10 @@ const Footer = ({ core }) => {
             </p>
             <br />
             <p>
-              <Link to="/app/manual" className="white--link">
+              <Link
+                to="/app/techdocs?file=Manual%20de%20Usuario.pdf"
+                className="white--link"
+              >
                 Manual de usuario
               </Link>
             </p>
@@ -33,11 +36,19 @@ const Footer = ({ core }) => {
                 Normatividad del sistema de investigación en salud
               </Link>
             </p>
+            <p>
+              <Link
+                to="/app/techdocs"
+                className="white--link"
+                onClick={() => core.setURL('/app/techdocs')}
+              >
+                Fichas Técnicas
+              </Link>
+            </p>
             <br />
             <p>E-mail: cdeis@saludcapital.gov.co </p>
             <p>Teléfono: (601) 3649090 extensión 9005</p>
-            <p>Versión: 1.0.2</p>
-            <p>Última actualización: 28/08/2022</p>
+            <p>Versión: 1.0.3 / Última actualización: 02/09/2022</p>
           </div>
         </Col>
         <Col xs={24} md={12} xxl={6}>

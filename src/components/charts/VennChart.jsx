@@ -9,7 +9,7 @@ import InfoButton from '../infoButton';
 /* UI Library Components */
 import { Card, Col } from 'antd';
 
-const VennChart = ({ data /* infoText */ }) => {
+const VennChart = ({ data, core }) => {
   const title = 'Fuentes Bibliográficas';
   const { sets, combinations } = useMemo(
     () =>
@@ -95,7 +95,7 @@ const VennChart = ({ data /* infoText */ }) => {
         headStyle={{ backgroundColor: '#003e65', color: 'white' }}
         bodyStyle={{ padding: '10px', height: '420px' }}
         hoverable
-        extra={<InfoButton title={title} type={'venn'} />}
+        extra={<InfoButton title={title} type={'venn'} core={core} />}
       >
         <VennDiagram
           className="chart"

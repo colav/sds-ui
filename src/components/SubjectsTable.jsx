@@ -90,12 +90,12 @@ const SubjectsTable = ({ core, type }) => {
           />
         )}
         <Column
-          title="Citas del tema"
+          title="Citas totales"
           dataIndex={'citations_count'}
           align="center"
         />
         <Column
-          title="Productos del tema"
+          title="Productos totales"
           dataIndex={'products_count'}
           align="center"
           style={{ fontSize: '24px' }}

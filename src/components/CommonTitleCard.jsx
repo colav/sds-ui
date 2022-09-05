@@ -17,10 +17,11 @@ import { ReadOutlined, BankOutlined } from '@ant-design/icons';
 
 /* UI Library Sub-components */
 const { Meta } = Card;
+const { Title } = Typography;
 
 const CommonTitleCard = ({ core, data, type }) => {
   const logoPath =
-    type === 'institutions' ? data.logo : data.affiliation.institution.logo;
+    type === 'institutions' ? data.logo : data.affiliation?.institution?.logo;
 
   return (
     <Col span={24}>
@@ -57,24 +58,33 @@ const CommonTitleCard = ({ core, data, type }) => {
                 style={{ fontSize: 22, margin: 0 }}
                 underline
               >
-                {type !== 'institutions' && (
-                  <>
-                    <BankOutlined
-                      style={{ marginRight: '10px', color: 'gray' }}
-                    />
-                    <Link
-                      to={`/app/institutions?id=${data.affiliation.institution.id}`}
-                      onClick={() =>
-                        core.setURL(
-                          `/app/institutions?id=${data.affiliation.institution.id}`
-                        )
-                      }
-                    >
-                      {data.affiliation.institution.name}
-                    </Link>
-                  </>
-                )}
+                {type !== 'institutions' &&
+                  data.affiliation?.institution?.name && (
+                    <>
+                      <BankOutlined
+                        style={{ marginRight: '10px', color: 'gray' }}
+                      />
+                      <Link
+                        to={`/app/institutions?id=${data.affiliation.institution.id}`}
+                        onClick={() =>
+                          core.setURL(
+                            `/app/institutions?id=${data.affiliation.institution.id}`
+                          )
+                        }
+                      >
+                        {data.affiliation.institution.name}
+                      </Link>
+                    </>
+                  )}
               </Typography.Paragraph>
+              {data.policies.ODS && (
+                <Title
+                  level={4}
+                  style={{ marginTop: 0, color: 'gray', marginBottom: 0 }}
+                >
+                  Aportes en:
+                </Title>
+              )}
               <Row style={{ marginTop: '10px' }}>
                 {data.policies.ODS && (
                   <PoliciesTag

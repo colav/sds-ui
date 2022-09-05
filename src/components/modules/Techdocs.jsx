@@ -17,11 +17,11 @@ import { FilePdfOutlined } from '@ant-design/icons';
 const { Column } = Table;
 const { Title } = Typography;
 
-const Regulations = ({ core }) => {
+const Techdocs = ({ core }) => {
   const [state] = APIRequest(`${core.URL}?data=info`);
 
   useEffect(() => {
-    document.title = 'SALUDATA | Normatividad';
+    document.title = 'SALUDATA | Fichas Técnicas';
   }, []);
 
   if (state.isError) {
@@ -32,16 +32,12 @@ const Regulations = ({ core }) => {
   return (
     <Row justify="center" style={{ marginTop: '50px', marginBottom: '30px' }}>
       <Col xxl={18} md={22} xs={24}>
-        <Title level={2}>
-          Normatividad del sistema de investigación en salud.
-        </Title>
+        <Title level={2}>Fichas Técnicas</Title>
         <Divider />
         <Title level={4}>
           Aquí podrá consultar y descargar los documentos correspondientes a
-          resoluciones, planes, políticas o directrices locales, nacionales e
-          internacionales que definen marcos de acción para los sistemas de
-          salud y las agendas de investigación locales, nacionales e
-          internacionales.
+          Fichas Técnicas de las distintas visualizaciones de datos y métricas
+          que aparecen en esta plataforma.
         </Title>
         <Table
           style={{ marginTop: '30px' }}
@@ -60,7 +56,7 @@ const Regulations = ({ core }) => {
             render={(item) => (
               <a
                 id="regulations__table--link"
-                href={`/app/regulations?file=${item}`}
+                href={`/app/techdocs?file=${item}`}
               >
                 {item}
               </a>
@@ -83,4 +79,4 @@ const Regulations = ({ core }) => {
   );
 };
 
-export default Regulations;
+export default Techdocs;

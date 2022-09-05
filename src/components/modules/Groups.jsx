@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 /* Utilities */
 import { APIRequest } from '../../apis/api';
-//import { useLocation } from "react-router";
+import { useLocation } from 'react-router';
 
 /* Components */
 import AuthorsTab from '../AuthorsTab';
@@ -20,22 +20,22 @@ import { Col, Row, Tabs } from 'antd';
 const { TabPane } = Tabs;
 
 const Groups = ({ core }) => {
-  /*   const location = useLocation();
-  let URL = location.pathname + location.search; */
-  const [state, setUrl] = APIRequest(`${core.URL}&data=info`);
+  const location = useLocation();
+  let URL = location.pathname + location.search;
+  const [state, setUrl] = APIRequest(`${URL}&data=info`);
 
   useEffect(() => {
     document.title = 'Grupos | SALUDATA';
   }, []);
 
   useEffect(() => {
-    setUrl(`${core.URL}&data=info`);
+    setUrl(`${URL}&data=info`);
     core.setFilters(state.data.filters);
     return () => {
       core.setFilters(null);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [core.URL, state]);
+  }, [URL, state]);
 
   if (state.isError) {
     return <ErrorWarning />;
