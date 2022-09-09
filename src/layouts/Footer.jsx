@@ -21,7 +21,7 @@ const Footer = ({ core }) => {
             <br />
             <p>
               <Link
-                to="/app/techdocs?file=Manual%20de%20Usuario.pdf"
+                to="/sds_api/app/techdocs?file=Manual%20de%20Usuario.pdf"
                 className="white--link"
               >
                 Manual de usuario

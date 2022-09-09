@@ -60,7 +60,7 @@ const Regulations = ({ core }) => {
             render={(item) => (
               <a
                 id="regulations__table--link"
-                href={`/app/regulations?file=${item}`}
+                href={`/sds_api/app/regulations?file=${item}`}
               >
                 {item}
               </a>

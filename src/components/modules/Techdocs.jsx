@@ -56,7 +56,7 @@ const Techdocs = ({ core }) => {
             render={(item) => (
               <a
                 id="regulations__table--link"
-                href={`/app/techdocs?file=${item}`}
+                href={`/sds_api/app/techdocs?file=${item}`}
               >
                 {item}
               </a>
