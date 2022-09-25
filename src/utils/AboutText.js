@@ -59,7 +59,7 @@ export const AboutText = (
     </p>
     <p>
       Las bases de datos consideradas para el procesamiento de la información
-      son: OpenAlex, Lens, OADOI de Unpaywall, DOAJ, las bases de datos abierta
+      son: OpenAlex, Lens, OADOI de Unpaywall, DOAJ, la base de datos abierta
       del Scienti del Ministerio de Ciencia, tecnología, innovación y
       competitividad. Todos los datos son abiertos.
     </p>
