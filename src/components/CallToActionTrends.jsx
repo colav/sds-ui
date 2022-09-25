@@ -26,12 +26,8 @@ const CallToActionTrends = ({ core, id, type }) => {
       </div>
       <div>
         <Link
-          to={`/app/${type === 'covid' ? 'subjects' : 'policies'}?id=${id}`}
-          onClick={() =>
-            core.setURL(
-              `/app/${type === 'covid' ? 'subjects' : 'policies'}?id=${id}`
-            )
-          }
+          to={`/app/subjects?id=${id}`}
+          onClick={() => core.setURL(`/app/subjects?id=${id}`)}
         >
           <Button size="large" type="primary">
             Haz click aquí
@@ -50,17 +46,13 @@ const CallToActionTrends = ({ core, id, type }) => {
         }}
       >
         <p>
-          <b>{`¿Quieres ver la información general sobre ${title[type]}?`}</b>
+          <b>{`Para consultar el documento sobre ${title[type]}`}</b>
         </p>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Link
-          to={`/app/${type === 'covid' ? 'subjects' : 'policies'}?id=${id}`}
-          onClick={() =>
-            core.setURL(
-              `/app/${type === 'covid' ? 'subjects' : 'policies'}?id=${id}`
-            )
-          }
+          to={`/app/regulations`}
+          onClick={() => core.setURL(`/app/regulations`)}
         >
           <Button type="primary" size="large">
             Haz click aquí

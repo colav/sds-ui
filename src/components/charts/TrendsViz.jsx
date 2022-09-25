@@ -5,7 +5,7 @@ import WordCloudChart from '../charts/WordCloudChart';
 
 /* Utilities */
 import { APIRequest } from '../../apis/api';
-import { Card, Col, Row, Statistic } from 'antd';
+import { Card, Col, Row, Statistic, Tooltip } from 'antd';
 
 /* Components */
 import ErrorWarning from '../ErrorWarning';
@@ -73,16 +73,21 @@ const TrendsViz = ({ selection, type, core }) => {
         </Card>
       </Col>
       <Col xs={12} lg={6}>
-        <Card>
-          <Statistic
-            title="Productos"
-            value={state.data.products}
-            valueStyle={{
-              color: '#3f8600',
-            }}
-            prefix={<FileOutlined />}
-          />
-        </Card>
+        <Tooltip
+          color="blue"
+          title="Si desea consultar los productos correspondientes a esta categoría, usar el buscador por tema con el término correspondiente."
+        >
+          <Card>
+            <Statistic
+              title="Productos"
+              value={state.data.products}
+              valueStyle={{
+                color: '#3f8600',
+              }}
+              prefix={<FileOutlined />}
+            />
+          </Card>
+        </Tooltip>
       </Col>
       <Col span={24}>
         <WordCloudChart

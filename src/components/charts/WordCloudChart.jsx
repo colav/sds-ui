@@ -47,6 +47,7 @@ const WordCloudChart = ({ title, data, core }) => {
     },
   };
 
+  console.log(data.length);
   return (
     <Card
       size="small"

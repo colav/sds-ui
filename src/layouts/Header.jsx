@@ -21,55 +21,17 @@ import {
 
 /* Utilities */
 import { Link } from 'react-router-dom';
+import { AboutText } from '../utils/AboutText';
 
 const Header = ({ core }) => {
   const showModal = () => {
     Modal.info({
-      width: '800px',
+      width: '1600px',
       title: 'Acerca de este módulo',
       maskClosable: true,
       icon: null,
       okText: 'Cerrar',
-      content: (
-        <>
-          <br />
-          <p>
-            El Módulo de Investigación en Salud reúne la producción científica
-            realizada en Bogotá sobre temas de interés en salud y bienestar.
-          </p>
-          <p>
-            La producción científica se refiere a los artículos, libros,
-            capítulos de libros y otro tipo de documentos que hacen parte de los
-            procesos de investigación desarrollados por instituciones académicas
-            y científicas.
-          </p>
-          <p>
-            Las bases de datos consideradas para el procesamiento de la
-            información son: OpenAlex, Lens, OADOI de Unpaywall, DOAJ, la bases
-            de datos abierta del Scienti del Ministerio de Ciencia, tecnología,
-            innovación y competitividad. Todos los datos son abiertos.
-          </p>
-          <p>
-            En la plataforma podrá encontrar la información organizada por
-            autores, grupos de investigación, instituciones y temas de interés
-            específicos o globales que están o se desarrollan en Bogotá.
-          </p>
-          <p>
-            A través de las distintas opciones de búsqueda, la comunidad
-            académica, y científica, los tomadores de decisiones, los
-            profesionales de las entidades de salud y la ciudadanía, podrán
-            acceder a información que permite hacer análisis en diferentes
-            niveles: desde la construcción de estados del arte, estudios de
-            caso, hasta el seguimiento a un tema específico que derive en nuevas
-            investigaciones, desarrollos tecnológicos, farmacéuticos o de
-            políticas públicas.
-          </p>
-          <p>
-            El Módulo de Investigación en Salud hace parte del Observatorio de
-            Bogotá SaluData.
-          </p>
-        </>
-      ),
+      content: AboutText,
     });
   };
 

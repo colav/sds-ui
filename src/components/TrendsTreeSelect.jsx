@@ -30,7 +30,6 @@ const TrendsTreeSelect = ({ data, core }) => {
           }}
           value={value}
           dropdownStyle={{
-            /* height: 450, */
             overflow: 'auto',
           }}
           treeLine={{ showLine: true, showIcon: false }}
@@ -43,17 +42,17 @@ const TrendsTreeSelect = ({ data, core }) => {
         />
       </Col>
       <Col span={24}>
-        {value && value.value.length === 7 ? (
+        {value && value.value.length >= 7 && value.value.length < 9 ? (
           <TrendsViz selection={value.label} type={'program'} />
         ) : (
           ''
         )}
-        {value && value.value.length === 9 ? (
+        {value && value.value.length >= 9 ? (
           <TrendsViz selection={value.label} type={'concept'} core={core} />
         ) : (
           ''
         )}
-        {!value || (value.value.length !== 9 && value.value.length !== 7) ? (
+        {!value || ![7, 8, 9, 10].includes(value.value.length) ? (
           <div
             style={{
               height: '585px',
