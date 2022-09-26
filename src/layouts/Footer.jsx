@@ -20,12 +20,12 @@ const Footer = ({ core }) => {
             </p>
             <br />
             <p>
-              <Link
-                to="/sds_api/app/techdocs?file=Manual%20de%20Usuario.pdf"
+              <a
+                href="/sds_api/app/techdocs?file=Manual%20de%20Usuario.pdf"
                 className="white--link"
               >
                 Manual de usuario
-              </Link>
+              </a>
             </p>
             <p>
               <Link
