@@ -41,7 +41,7 @@ const HomeTable = () => {
       key: '3',
       search: 'Grupo de investigación',
       example:
-        'Consulte con el nombre completo de un grupo o alguna de las palabras de su nombre, los temas de trabajo, las publicaciones, citaciones, autores y coautores de un grupo de investigación bogotano (ej. "Grupo de Virología").',
+        'Consulte con el nombre completo de un grupo o alguna de las palabras de su nombre, los temas de trabajo, las publicaciones, citaciones, autores y coautores de un grupo de investigación bogotano (ej. "Grupo de Virología"). Los datos de codificación y nombre de los grupos son tomados de los datos abiertos de Minciencias disponibles en:',
     },
     {
       key: '4',

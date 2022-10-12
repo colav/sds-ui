@@ -37,6 +37,52 @@ const Trends = ({ core }) => {
   }
   return (
     <>
+      <Divider
+        style={{
+          fontSize: '40px',
+          textAlign: 'center',
+          whiteSpace: 'break-spaces',
+          marginTop: '30px',
+        }}
+      >
+        Objetivos de Desarrollo Sostenible
+      </Divider>
+      <Row
+        justify="space-between"
+        align="middle"
+        style={{ backgroundColor: '#4c9f38', minHeight: '150px' }}
+      >
+        <Col xs={24} md={6} lg={4} style={{ padding: '30px' }}>
+          <img src={title_ODS} alt="Salud y Bienestar" />
+        </Col>
+        <Col xs={24} md={10} lg={10}>
+          <Title level={2} style={{ textAlign: 'center', color: 'white' }}>
+            “Garantizar una vida sana y promover el bienestar de todos a todas
+            las edades.”
+          </Title>
+        </Col>
+        <Col
+          xs={0}
+          md={6}
+          lg={4}
+          style={{ marginRight: '30px', textAlign: 'right' }}
+        >
+          <img src={logo_ODS} alt="Logo ODS 3" id="logo__ods" />
+        </Col>
+      </Row>
+      <br />
+      <Row gutter={[15, 15]} align="middle" justify="center">
+        <ODSInfographic core={core} data={state.data.ODS} />
+      </Row>
+      <Divider
+        style={{
+          fontSize: '40px',
+          textAlign: 'center',
+          marginTop: '30px',
+        }}
+      >
+        Covid-19
+      </Divider>
       <Row
         justify="space-around"
         align="middle"
@@ -105,7 +151,12 @@ const Trends = ({ core }) => {
       <Row
         align="top"
         gutter={[20, 20]}
-        style={{ width: '100%', marginLeft: 0, marginRight: 0 }}
+        style={{
+          width: '100%',
+          marginLeft: 0,
+          marginRight: 0,
+          marginBottom: '50px',
+        }}
       >
         <Col xs={24} lg={8}>
           <Infographic
@@ -120,43 +171,6 @@ const Trends = ({ core }) => {
         <Col xs={24} lg={16}>
           <TrendsTreeSelect data={state.data.PDD.tree} core={core} />
         </Col>
-      </Row>
-      <Divider
-        style={{
-          fontSize: '40px',
-          textAlign: 'center',
-          whiteSpace: 'break-spaces',
-          marginTop: '50px',
-        }}
-      >
-        Objetivos de Desarrollo Sostenible
-      </Divider>
-      <Row
-        justify="space-between"
-        align="middle"
-        style={{ backgroundColor: '#4c9f38', minHeight: '150px' }}
-      >
-        <Col xs={24} md={6} lg={4} style={{ padding: '30px' }}>
-          <img src={title_ODS} alt="Salud y Bienestar" />
-        </Col>
-        <Col xs={24} md={10} lg={10}>
-          <Title level={2} style={{ textAlign: 'center', color: 'white' }}>
-            “Garantizar una vida sana y promover el bienestar de todos a todas
-            las edades.”
-          </Title>
-        </Col>
-        <Col
-          xs={0}
-          md={6}
-          lg={4}
-          style={{ marginRight: '30px', textAlign: 'right' }}
-        >
-          <img src={logo_ODS} alt="Logo ODS 3" id="logo__ods" />
-        </Col>
-      </Row>
-      <br />
-      <Row gutter={[15, 15]} align="middle" justify="center">
-        <ODSInfographic core={core} data={state.data.ODS} />
       </Row>
     </>
   );

@@ -37,45 +37,60 @@ const TrendsViz = ({ selection, type, core }) => {
   return (
     <Row gutter={[10, 10]}>
       <Col xs={12} lg={6}>
-        <Card>
-          <Statistic
-            title="Instituciones"
-            value={state.data.institutions}
-            valueStyle={{
-              color: '#3f8600',
-            }}
-            prefix={<BankOutlined />}
-          />
-        </Card>
-      </Col>
-      <Col xs={12} lg={6}>
-        <Card>
-          <Statistic
-            title="Grupos"
-            value={state.data.groups}
-            valueStyle={{
-              color: '#3f8600',
-            }}
-            prefix={<TeamOutlined />}
-          />
-        </Card>
-      </Col>
-      <Col xs={12} lg={6}>
-        <Card>
-          <Statistic
-            title="Autores"
-            value={state.data.authors}
-            valueStyle={{
-              color: '#3f8600',
-            }}
-            prefix={<UserOutlined />}
-          />
-        </Card>
+        <Tooltip
+          color="blue"
+          title="Si desea consultar las instituciones correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
+        >
+          <Card>
+            <Statistic
+              title="Instituciones"
+              value={state.data.institutions}
+              valueStyle={{
+                color: '#3f8600',
+              }}
+              prefix={<BankOutlined />}
+            />
+          </Card>
+        </Tooltip>
       </Col>
       <Col xs={12} lg={6}>
         <Tooltip
           color="blue"
-          title="Si desea consultar los productos correspondientes a esta categoría, usar el buscador por tema con el término correspondiente."
+          title="Si desea consultar los grupos correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
+        >
+          <Card>
+            <Statistic
+              title="Grupos"
+              value={state.data.groups}
+              valueStyle={{
+                color: '#3f8600',
+              }}
+              prefix={<TeamOutlined />}
+            />
+          </Card>
+        </Tooltip>
+      </Col>
+      <Col xs={12} lg={6}>
+        <Tooltip
+          color="blue"
+          title="Si desea consultar los autores correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
+        >
+          <Card>
+            <Statistic
+              title="Autores"
+              value={state.data.authors}
+              valueStyle={{
+                color: '#3f8600',
+              }}
+              prefix={<UserOutlined />}
+            />
+          </Card>
+        </Tooltip>
+      </Col>
+      <Col xs={12} lg={6}>
+        <Tooltip
+          color="blue"
+          title="Si desea consultar los productos correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
         >
           <Card>
             <Statistic
