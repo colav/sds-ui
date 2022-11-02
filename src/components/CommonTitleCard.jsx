@@ -49,13 +49,14 @@ const CommonTitleCard = ({ core, data, type }) => {
                 {data.abbreviations ? `(${data.abbreviations})` : ''}
               </Typography.Title>
               <Typography.Title
+                className="bold"
                 level={3}
                 style={{ marginTop: 0, color: 'gray', marginBottom: 0 }}
               >
                 {data.citations ? `Citaciones: ${data.citations}` : ''}
               </Typography.Title>
               <Typography.Paragraph
-                style={{ fontSize: 22, margin: 0 }}
+                style={{ fontSize: 16, margin: 0 }}
                 underline
               >
                 {type !== 'institutions' &&
@@ -79,6 +80,7 @@ const CommonTitleCard = ({ core, data, type }) => {
               </Typography.Paragraph>
               {data.policies.ODS && (
                 <Title
+                  className="bold"
                   level={4}
                   style={{ marginTop: 0, color: 'gray', marginBottom: 0 }}
                 >
