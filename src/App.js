@@ -52,13 +52,7 @@ function App() {
       <FilterDrawer core={core} />
       <Layout>
         <Header core={core} />
-        <Layout.Content
-          style={{
-            minHeight: '70vh',
-            position: 'relative',
-            margin: '15px',
-          }}
-        >
+        <Layout.Content id="content-box">
           <Switch>
             <Redirect exact from="/" to="/app" />
             <Route exact path="/app">

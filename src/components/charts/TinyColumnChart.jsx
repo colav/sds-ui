@@ -9,6 +9,7 @@ const TinyColumnChart = React.memo(function ({ data }) {
     height: 140,
     xField: 'year',
     yField: 'products',
+    seriesField: 'year',
     tooltip: {
       formatter: (datum) => {
         return {

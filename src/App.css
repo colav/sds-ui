@@ -3,8 +3,9 @@
 /* ----- HEADER ----- */
 
 .header__logo {
-  max-height: 60px;
-  padding: 7px;
+  max-height: 46px;
+  padding: 0 15px;
+  margin-bottom: 4px;
 }
 
 .header--menu {
@@ -204,7 +205,14 @@
 }
 
 #home__divider--title {
-  font-size: 24px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  #home__divider--title {
+    white-space: break-spaces;
+  }
 }
 
 #home__table--container {
@@ -215,13 +223,38 @@
 
 #home__banner {
   position: absolute;
-  margin: -56px -15px 0 -15px;
+  width: 100vw;
+  margin-top: -56px;
+  margin-left: calc(50% - 50vw - 15px);
 }
 
 /* ----- CONTENT ----- */
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+#content-box {
+  min-height: 70vh;
+  max-width: 1400px;
+  position: relative;
+  margin: 0 auto;
+  padding: 15px;
+  width: 100%;
+}
+
 .divider__title {
   font-size: 30px;
+}
+
+.trends-divider > .ant-divider-inner-text {
+  font-size: 40px;
+  text-align: center;
 }
 
 #logo__ods {
@@ -282,6 +315,11 @@
   text-align: center;
 }
 
+.ods-card > p {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
 .ods__name {
   font-weight: 500;
   font-style: italic;
@@ -311,6 +349,21 @@
 
 /* ----- UI LIBRARY OVERWRITE ----- */
 
+.ant-btn {
+  font-weight: 500;
+}
+.trends-button {
+  color: white;
+  font-weight: 600;
+  background-color: #f6c022;
+  border: 1px solid #e7a900;
+}
+
+.trends-button:hover {
+  background-color: #ff9a15;
+  border: 1px solid #e7a900;
+}
+
 .ant-list-vertical .ant-list-item {
   align-items: center;
 }
@@ -336,6 +389,19 @@
 
 .ant-tabs-nav {
   border-bottom: 2px solid white;
+}
+
+.ant-tabs {
+  margin-top: 15px;
+}
+
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active {
+  background-color: #f6c022;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white;
 }
 
 .white-text {
@@ -414,37 +480,13 @@
     display: none;
   }
 
-  #home__head--title {
-    text-align: center;
-    color: #041625;
-    font-size: 30px;
-    font-weight: 600;
-    text-shadow: none;
-    margin: 20px 0 0 0;
-  }
-
   #home__map--title {
     font-size: 18px;
     white-space: normal;
   }
-}
 
-@media (max-width: 1500px) {
-  #home__head--title {
-    margin-top: -150px;
-  }
-}
-
-@media (max-width: 1300px) {
-  #home__head--title {
-    margin-top: -250px;
-  }
-}
-
-@media (max-width: 1199px) {
-  #home__head--title {
-    margin-top: 0px;
-    text-align: center;
+  .trends-divider > .ant-divider-inner-text {
+    white-space: break-spaces;
   }
 }
 

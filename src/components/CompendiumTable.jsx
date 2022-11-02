@@ -84,7 +84,7 @@ const CompendiumTable = ({ core, type }) => {
             onChange: (page, max) => onPageChange({ page: page, max: max }),
           }}
           rowClassName="compendium__row--height"
-          scroll={{ x: 1400 }}
+          scroll={{ x: 1300 }}
         >
           {!policies_flag && (
             <Column
@@ -215,7 +215,7 @@ const CompendiumTable = ({ core, type }) => {
           onChange: (page, max) => onPageChange({ page: page, max: max }),
         }}
         rowClassName="compendium__row--height"
-        scroll={{ x: 1400 }}
+        scroll={{ x: 1300 }}
       >
         {!policies_flag && (
           <Column

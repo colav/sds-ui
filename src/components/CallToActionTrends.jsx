@@ -29,7 +29,7 @@ const CallToActionTrends = ({ core, id, type }) => {
           to={`/app/subjects?id=${id}`}
           onClick={() => core.setURL(`/app/subjects?id=${id}`)}
         >
-          <Button size="large" type="primary">
+          <Button className="trends-button" size="large" type="primary">
             Haz click aquí
           </Button>
         </Link>
@@ -54,7 +54,7 @@ const CallToActionTrends = ({ core, id, type }) => {
           to={`/app/regulations`}
           onClick={() => core.setURL(`/app/regulations`)}
         >
-          <Button type="primary" size="large">
+          <Button className="trends-button" type="primary" size="large">
             Haz click aquí
           </Button>
         </Link>

@@ -21,6 +21,7 @@ const ColumnChart = ({
     appendPadding: [10, 10, 0, 10],
     xField: 'type',
     yField: 'value',
+    seriesField: 'type',
     columnWidthRatio: 0.6,
     columnBackground: { style: { fill: 'rgba(0,0,0,0.1)' } },
     tooltip: {
@@ -75,14 +76,14 @@ const ColumnChart = ({
       extra={<InfoButton title={title} type={type} />}
     >
       <div className="chart">
-        {type !== 'compendium' && (
+        {type !== 'compendiumScholar' && (
           <p id="column__statistic">
             Total: <b>{total}</b>
           </p>
         )}
         <Column
           {...config}
-          style={{ height: type === 'compendium' ? '99%' : '88%' }}
+          style={{ height: type === 'compendiumScholar' ? '99%' : '88%' }}
         />
       </div>
     </Card>

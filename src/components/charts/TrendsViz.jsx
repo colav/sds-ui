@@ -41,7 +41,7 @@ const TrendsViz = ({ selection, type, core }) => {
           color="blue"
           title="Si desea consultar las instituciones correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
         >
-          <Card>
+          <Card size="small">
             <Statistic
               title="Instituciones"
               value={state.data.institutions}
@@ -58,7 +58,7 @@ const TrendsViz = ({ selection, type, core }) => {
           color="blue"
           title="Si desea consultar los grupos correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
         >
-          <Card>
+          <Card size="small">
             <Statistic
               title="Grupos"
               value={state.data.groups}
@@ -75,7 +75,7 @@ const TrendsViz = ({ selection, type, core }) => {
           color="blue"
           title="Si desea consultar los autores correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
         >
-          <Card>
+          <Card size="small">
             <Statistic
               title="Autores"
               value={state.data.authors}
@@ -92,7 +92,7 @@ const TrendsViz = ({ selection, type, core }) => {
           color="blue"
           title="Si desea consultar los productos correspondientes a esta categoría, usar el buscador por producto con el concepto correspondiente entre comillas."
         >
-          <Card>
+          <Card size="small">
             <Statistic
               title="Productos"
               value={state.data.products}

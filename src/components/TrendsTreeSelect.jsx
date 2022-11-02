@@ -55,7 +55,7 @@ const TrendsTreeSelect = ({ data, core }) => {
         {!value || ![7, 8, 9, 10].includes(value.value.length) ? (
           <div
             style={{
-              height: '585px',
+              height: '485px',
               backgroundColor: 'white',
               display: 'flex',
               alignItems: 'center',
