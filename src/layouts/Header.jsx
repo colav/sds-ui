@@ -17,6 +17,7 @@ import {
   LineChartOutlined,
   BarChartOutlined,
   FileSearchOutlined,
+  FileMarkdownOutlined,
 } from '@ant-design/icons';
 
 /* Utilities */
@@ -27,7 +28,7 @@ const Header = ({ core }) => {
   const showModal = () => {
     Modal.info({
       width: '1600px',
-      title: 'Acerca de este módulo',
+      title: <h2 className="bold">Acerca de este módulo</h2>,
       maskClosable: true,
       icon: null,
       okText: 'Cerrar',
@@ -44,7 +45,7 @@ const Header = ({ core }) => {
           top: 0,
           zIndex: 1001,
           height: 'auto',
-          lineHeight: '56px',
+          lineHeight: '72px',
           backgroundColor: '#009fe3',
           boxShadow:
             '0 5px 10px rgba(15, 15, 20, 0.25), 0 10px 20px rgba(0, 0, 0, 0.1)',
@@ -180,6 +181,12 @@ const Header = ({ core }) => {
                 Convocatorias
               </Link>
             </Tooltip>
+          </Col>
+          <Col className="margin-25">
+            <FileMarkdownOutlined className="header__icon" />
+            <a href="/sds_api/app/techdocs?file=Manual%20de%20Usuario.pdf">
+              Manual de usuario
+            </a>
           </Col>
         </Row>
       </Col>

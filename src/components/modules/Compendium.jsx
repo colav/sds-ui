@@ -38,7 +38,7 @@ const Compendium = ({ core }) => {
   return (
     <Tabs defaultActiveKey="authors" type="card" tabBarGutter={5}>
       <TabPane tab="Autores" key="authors">
-        <Title style={secondary_color} level={3}>
+        <Title style={secondary_color} level={5}>
           En esta sección podrá encontrar una descripción demográfica general
           del personal dedicado a la investigación en salud en Bogotá. Están
           discriminados por sexo, rango de edad, categoría Minciencias y nivel
@@ -47,7 +47,7 @@ const Compendium = ({ core }) => {
         <AuthorsTabOnCompendium />
       </TabPane>
       <TabPane tab="Grupos" key="groups">
-        <Title style={secondary_color} level={3}>
+        <Title style={secondary_color} level={5}>
           En esta sección podrá encontrar un listado de los grupos de
           investigación radicados en Bogotá o que desarrollan coautorías con
           grupos bogotanos y pueden ser organizados de mayor a menor, de acuerdo
@@ -59,7 +59,7 @@ const Compendium = ({ core }) => {
         <CompendiumTable core={core} type="groups" />
       </TabPane>
       <TabPane tab="Instituciones" key="institutions">
-        <Title style={secondary_color} level={3}>
+        <Title style={secondary_color} level={5}>
           En esta sección podrá encontrar un listado de las instituciones que
           hacen investigación en salud en Bogotá o que tienen coautorías con
           instituciones bogotanas ordenadas de mayor a menor por número de
@@ -71,7 +71,7 @@ const Compendium = ({ core }) => {
         <CompendiumTable core={core} type="institutions" />
       </TabPane>
       <TabPane tab="Temas" key="subjects">
-        <Title style={secondary_color} level={3}>
+        <Title style={secondary_color} level={5}>
           En esta sección podrá encontrar el listado de temas en los que
           publican artículos científicos el personal dedicado a investigación en
           Bogotá. Pueden ser ordenados por número de artículos publicados y

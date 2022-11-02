@@ -32,23 +32,17 @@ const Home = ({ core }) => {
     <>
       <Banner id="home__banner" />
       <Row justify="space-around" align="middle">
-        <Col flex sm={24} xl={10} xxl={8}>
-          <Title id="home__head--title">
-            Conozca la producción científica realizada en Bogotá sobre temas de
-            interés en salud y bienestar.
-          </Title>
-        </Col>
         <Col
-          sm={24}
-          xl={12}
-          xxl={12}
+          span={24}
           style={{ marginTop: '15px', marginBottom: 0, textAlign: 'center' }}
         >
           <Card size="small" bordered style={{ borderRadius: '10px' }}>
             <Title level={2}>Central de información científica</Title>
             <Title level={4}>
-              La información puede ser consultada por temas, productos,
-              instituciones, grupos de investigación o autores.
+              Conozca la producción científica realizada en Bogotá sobre temas
+              de interés en salud y bienestar. La información puede ser
+              consultada por temas, productos, instituciones, grupos de
+              investigación o autores.
             </Title>
             <div className="searchbar--container">
               <SearchBar core={core} />
@@ -72,27 +66,27 @@ const Home = ({ core }) => {
         </Col>
       </Row>
       <Row justify="center" style={{ marginTop: '60px' }}>
-        <Col xs={20} lg={14}>
+        <Col span={24}>
           <Divider
             id="home__divider--title"
-            style={{ whiteSpace: 'break-spaces' }}
+            /* style={{ whiteSpace: 'break-spaces' }} */
           >
             Investigación en salud sobre el territorio
           </Divider>
         </Col>
       </Row>
       <Row justify="space-around" align="middle" style={{ marginTop: '15px' }}>
-        <Col xs={24} lg={15}>
-          <BogotaMapChart />
-        </Col>
-        <Col xs={24} lg={6}>
-          <Title level={3}>
+        <Col span={24}>
+          <Title level={5}>
             Este mapa muestra un artículo seleccionado de manera aleatoria, cuyo
             lugar de análisis se corresponde con una localidad de Bogotá. Si
             está interesado en conocer más investigaciones sobre una localidad
             específica, ingrese al buscador y utilice el nombre de la localidad
             como palabra clave en la opción “Producto”.
           </Title>
+        </Col>
+        <Col span={24}>
+          <BogotaMapChart />
         </Col>
       </Row>
     </>

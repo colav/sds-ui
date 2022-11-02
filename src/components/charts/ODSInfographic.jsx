@@ -39,7 +39,7 @@ const ODSInfographic = ({ core, data }) => {
           <p className="ods__name">"{item.name}."</p>
           <Card.Meta
             description={
-              <div style={{ fontWeight: 600 }}>
+              <div className="ods-card">
                 <p>Documentos: {item.products}</p>
                 <p>Autores: {item.authors}</p>
                 <p>Grupos: {item.groups}</p>
@@ -52,7 +52,9 @@ const ODSInfographic = ({ core, data }) => {
               to={`/app/policies?id=${item.id}`}
               onClick={() => core.setURL(`/app/policies?id=${item.id}`)}
             >
-              <Button type="primary">Ampliar información</Button>
+              <Button className="trends-button" type="primary">
+                Ampliar información
+              </Button>
             </Link>
           </div>
         </Card>

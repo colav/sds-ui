@@ -77,6 +77,7 @@ const AuthorsTitleCard = ({ core, data }) => {
                 )}
               </Typography.Title>
               <Typography.Title
+                className="bold"
                 level={3}
                 style={{ marginTop: 0, color: 'gray', marginBottom: 0 }}
               >
@@ -84,7 +85,7 @@ const AuthorsTitleCard = ({ core, data }) => {
               </Typography.Title>
               {data.affiliation?.institution?.name && (
                 <Typography.Paragraph
-                  style={{ fontSize: 22, margin: 0 }}
+                  style={{ fontSize: 16, margin: 0 }}
                   underline
                 >
                   <BankOutlined
@@ -104,7 +105,7 @@ const AuthorsTitleCard = ({ core, data }) => {
               )}
               {data.affiliation?.group?.name && (
                 <Typography.Paragraph
-                  style={{ fontSize: 22, marginBottom: '5px' }}
+                  style={{ fontSize: 16, marginBottom: '5px' }}
                   underline
                 >
                   <TeamOutlined
@@ -120,9 +121,17 @@ const AuthorsTitleCard = ({ core, data }) => {
                   </Link>
                 </Typography.Paragraph>
               )}
+              <Title
+                className="bold"
+                level={4}
+                style={{ marginTop: 0, color: 'gray', marginBottom: 0 }}
+              >
+                Perfil en:
+              </Title>
               <Space wrap>{renderedButtons(data.external_urls)}</Space>
               {data.policies.ODS && (
                 <Title
+                  className="bold"
                   level={4}
                   style={{ marginTop: 0, color: 'gray', marginBottom: 0 }}
                 >

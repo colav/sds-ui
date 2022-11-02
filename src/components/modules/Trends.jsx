@@ -37,14 +37,7 @@ const Trends = ({ core }) => {
   }
   return (
     <>
-      <Divider
-        style={{
-          fontSize: '40px',
-          textAlign: 'center',
-          whiteSpace: 'break-spaces',
-          marginTop: '30px',
-        }}
-      >
+      <Divider className="trends-divider">
         Objetivos de Desarrollo Sostenible
       </Divider>
       <Row
@@ -52,7 +45,7 @@ const Trends = ({ core }) => {
         align="middle"
         style={{ backgroundColor: '#4c9f38', minHeight: '150px' }}
       >
-        <Col xs={24} md={6} lg={4} style={{ padding: '30px' }}>
+        <Col xs={24} md={6} lg={4} style={{ padding: '35px' }}>
           <img src={title_ODS} alt="Salud y Bienestar" />
         </Col>
         <Col xs={24} md={10} lg={10}>
@@ -65,7 +58,7 @@ const Trends = ({ core }) => {
           xs={0}
           md={6}
           lg={4}
-          style={{ marginRight: '30px', textAlign: 'right' }}
+          style={{ marginRight: '35px', textAlign: 'right' }}
         >
           <img src={logo_ODS} alt="Logo ODS 3" id="logo__ods" />
         </Col>
@@ -74,13 +67,7 @@ const Trends = ({ core }) => {
       <Row gutter={[15, 15]} align="middle" justify="center">
         <ODSInfographic core={core} data={state.data.ODS} />
       </Row>
-      <Divider
-        style={{
-          fontSize: '40px',
-          textAlign: 'center',
-          marginTop: '30px',
-        }}
-      >
+      <Divider style={{ marginTop: '35px' }} className="trends-divider">
         Covid-19
       </Divider>
       <Row
@@ -89,7 +76,7 @@ const Trends = ({ core }) => {
         gutter={[70, 30]}
         style={{ width: '100%', marginTop: '50px' }}
       >
-        <Col xs={24} lg={7}>
+        <Col xs={24} lg={10}>
           <Infographic
             title="COVID-19"
             productsValue={state.data.covid.products}
@@ -98,8 +85,8 @@ const Trends = ({ core }) => {
             institutionsValue={state.data.covid.institutions}
           />
         </Col>
-        <Col xs={24} lg={10}>
-          <Title>
+        <Col xs={24} lg={14}>
+          <Title style={{ fontSize: '42px', fontWeight: 700 }}>
             Indicadores sobre producción generada en Bogotá sobre Covid 19.
           </Title>
           <CallToActionTrends
@@ -109,14 +96,7 @@ const Trends = ({ core }) => {
           />
         </Col>
       </Row>
-      <Divider
-        style={{
-          fontSize: '40px',
-          textAlign: 'center',
-          whiteSpace: 'break-spaces',
-          marginTop: '50px',
-        }}
-      >
+      <Divider style={{ marginTop: '35px' }} className="trends-divider">
         Plan Territorial de Salud
       </Divider>
       <Row
@@ -124,7 +104,7 @@ const Trends = ({ core }) => {
         gutter={[20, 20]}
         style={{ width: '100%', marginLeft: 0, marginRight: 0 }}
       >
-        <Col xs={24} lg={8}>
+        <Col xs={24} lg={10}>
           <Infographic
             title="PTS"
             productsValue={state.data.PTS.products}
@@ -134,18 +114,11 @@ const Trends = ({ core }) => {
           />
           <CallToActionTrends core={core} id={state.data.PTS.id} type="pts" />
         </Col>
-        <Col xs={24} lg={16}>
+        <Col xs={24} lg={14}>
           <TrendsTreeSelect data={state.data.PTS.tree} core={core} />
         </Col>
       </Row>
-      <Divider
-        style={{
-          fontSize: '40px',
-          textAlign: 'center',
-          whiteSpace: 'break-spaces',
-          marginTop: '50px',
-        }}
-      >
+      <Divider style={{ marginTop: '35px' }} className="trends-divider">
         Plan Distrital de Desarrollo
       </Divider>
       <Row
@@ -158,7 +131,7 @@ const Trends = ({ core }) => {
           marginBottom: '50px',
         }}
       >
-        <Col xs={24} lg={8}>
+        <Col xs={24} lg={10}>
           <Infographic
             title="PDD"
             productsValue={state.data.PDD.products}
@@ -168,7 +141,7 @@ const Trends = ({ core }) => {
           />
           <CallToActionTrends core={core} id={state.data.PDD.id} type="pdd" />
         </Col>
-        <Col xs={24} lg={16}>
+        <Col xs={24} lg={14}>
           <TrendsTreeSelect data={state.data.PDD.tree} core={core} />
         </Col>
       </Row>

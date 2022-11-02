@@ -6,7 +6,7 @@ export const AboutText = (
       realizada en Bogotá sobre temas de interés en salud y bienestar.
     </p>
     <hr />
-    <h4>Objetivo General:</h4>
+    <h3 className="bold">Objetivo General:</h3>
     <p>
       Presentar a la ciudadanía y a los tomadores de decisiones en temas de
       salud de la ciudad, análisis sobre el panorama del sistema de ciencia,
@@ -14,7 +14,7 @@ export const AboutText = (
       permitirá la toma de decisiones en salud por parte de los actores del
       ecosistema.
     </p>
-    <h4>Objetivos Específicos:</h4>
+    <h3 className="bold">Objetivos Específicos:</h3>
     <ul>
       <li>
         Facilitar a los integrantes del ecosistema científico de la ciudad, el
@@ -36,13 +36,13 @@ export const AboutText = (
         al Observatorio Distrital de Salud, SALUD DATA.
       </li>
     </ul>
-    <h4>Misión:</h4>
+    <h3 className="bold">Misión:</h3>
     <p>
       Permitir a los integrantes del ecosistema científico de Bogotá, acceder a
       información actualizada y confiable, relacionada con ciencia, tecnologia e
       investigación de la ciudad.
     </p>
-    <h4>Visión:</h4>
+    <h3 className="bold">Visión:</h3>
     <p>
       A 2024, ser uno de los principales sitios web de consulta relacionada con
       el nuevo conocimiento, la apropiación social del conocimiento, el
