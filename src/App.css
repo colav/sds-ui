@@ -236,7 +236,7 @@ body {
 }
 
 .bold {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 #content-box {
@@ -345,6 +345,17 @@ body {
   margin-top: 15px;
   margin-bottom: 0;
   font-size: 17px;
+}
+
+.calls__logo-container {
+  max-width: 300px;
+  max-height: 70px;
+  margin-bottom: 20px;
+}
+
+.calls__logo-container > img {
+  object-fit: contain;
+  object-position: right top;
 }
 
 /* ----- UI LIBRARY OVERWRITE ----- */

@@ -84,7 +84,7 @@ const SearchResult = ({ core }) => {
         <Card
           headStyle={{ backgroundColor: '#003e65', color: 'white' }}
           size="small"
-          bodyStyle={{ padding: '10px 0 10px 10px' }}
+          bodyStyle={{ padding: '10px' }}
           title={titles[parsed['/app/search?data']]}
           extra={
             <div>

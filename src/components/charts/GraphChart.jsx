@@ -12,13 +12,14 @@ import G6 from '@antv/g6';
 
 const GraphChart = ({ data, title, height = 622 }) => {
   const ref = useRef(null);
+  const { innerWidth } = window;
 
   useEffect(() => {
     let graph = null;
     if (!graph) {
       graph = new G6.Graph({
         container: ReactDOM.findDOMNode(ref.current),
-        width: 2000,
+        width: innerWidth > 1400 ? 1346 : innerWidth - 53,
         height: 600,
         modes: {
           default: [
@@ -45,8 +46,6 @@ const GraphChart = ({ data, title, height = 622 }) => {
                 }`;
               },
             },
-            'drag-node',
-            /* "activate-relations", */
           ],
         },
         layout: {
@@ -70,6 +69,7 @@ const GraphChart = ({ data, title, height = 622 }) => {
     }
     graph.data(data);
     graph.render();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   return (
