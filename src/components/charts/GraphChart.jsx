@@ -49,7 +49,7 @@ const GraphChart = ({ data, title, height = 622 }) => {
           ],
         },
         layout: {
-          type: data.nodes.length > 220 ? 'forceAtlas2' : 'gForce',
+          type: data?.nodes?.length > 220 ? 'forceAtlas2' : 'gForce',
           preventOverlap: true,
         },
         defaultNode: {

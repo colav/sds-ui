@@ -10,6 +10,7 @@ import { Card, Col, Row, Statistic, Tooltip } from 'antd';
 /* Components */
 import ErrorWarning from '../ErrorWarning';
 import LoadingCard from '../LoadingCard';
+import EmptyCard from '../EmptyCard';
 
 /* Icons */
 import {
@@ -105,11 +106,15 @@ const TrendsViz = ({ selection, type, core }) => {
         </Tooltip>
       </Col>
       <Col span={24}>
-        <WordCloudChart
-          title="Temas"
-          data={state.data.word_cloud}
-          core={core}
-        />
+        {state?.data?.word_cloud?.length === 0 ? (
+          <EmptyCard />
+        ) : (
+          <WordCloudChart
+            title="Temas"
+            data={state.data.word_cloud}
+            core={core}
+          />
+        )}
       </Col>
     </Row>
   );
