@@ -28,6 +28,13 @@ const dataFetchReducer = (state, action) => {
         isLoading: false,
         isError: true,
       };
+    case 'FETCH_EMPTY':
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        isEmpty: true,
+      };
     default:
       throw new Error();
   }
@@ -49,7 +56,7 @@ export const APIRequest = (initialUrl) => {
 
         if (!didCancel) {
           if (result.status === 204) {
-            dispatch({ type: 'FETCH_FAILURE' });
+            dispatch({ type: 'FETCH_EMPTY' });
           } else dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
         }
       } catch (error) {

@@ -7,6 +7,7 @@ import { useLocation } from 'react-router';
 /* Components */
 import ErrorWarning from '../ErrorWarning';
 import LoadingCard from '../LoadingCard';
+import EmptyCard from '../EmptyCard';
 
 /* Charts */
 import WordCloudChart from '../charts/WordCloudChart';
@@ -28,9 +29,17 @@ const SubjectsWrapper = ({ core }) => {
   if (state.isLoading) {
     return <LoadingCard />;
   }
+  if (state.isEmpty || state?.data?.data?.length === 0) {
+    return <EmptyCard />;
+  }
   return (
     <div>
-      <WordCloudChart title="Temas" data={state.data.data} core={core} />
+      <WordCloudChart
+        title="Temas"
+        data={state.data.data}
+        core={core}
+        state={state}
+      />
     </div>
   );
 };
